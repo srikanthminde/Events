@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+     
+       
+        <input type="radio" name="sub" value="telugu">:telugu
+        <input type="radio" name="sub" value="english">:english
+        <input type="radio" name="sub" value="sicnce">:sicnce
+        <input type="radio" name="sub" value="social">:social
+        <input type="radio" name="sub" value="hindi">:hindi
+        <input type="radio" name="sub" value="chemistry">:chemistry 
+        <input type="radio" name="sub" value="campute sicnce">:campute sicnce
+        <button  onclick="sub(event)">show subject</button>
+        <h1 id="sub"></h1>
+       
+        <script>
+                  var v=""
+                  function sub(ev){
+                  var c =document.getElementsByName("sub")
+                  c.forEach(function(v){
+                  if(v.checked===true){
+                  console.log(v.value)
+                  document.getElementById("sub").innerHTML=v.value
+            }
+        })
+    }
+        </script>
+    </body>
+</html>

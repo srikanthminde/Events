@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            img{
+                width: 100px;
+                height: 100px;
+            }
+            #d4{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        
+    <div id="d5"></div>
+   
+
+    <div style="text-align: center;">
+
+    <img id="d1" onclick ="abc(event)" src="https://1.bp.blogspot.com/-RbFmOOkPA6M/TflUx8K6-gI/AAAAAAAABlU/VzRARIv1rYE/s1600/Charter-flights.jpg" width="210px">
+
+    <img id="d2" onclick ="abc(event)" src="https://www.paddleyourownkanoo.com/wp-content/uploads/2017/06/JAL_aircraft_flying_over_Mount_Fuji2400x2553-e1497949123204.jpg" width="250 px">
+
+    <img id="d3"  onclick ="abc(event)"src="https://i.pinimg.com/originals/2b/6a/54/2b6a54b3773a8d70508cb5adfe94f6cd.jpg" width="220 px">
+
+  
+</div>
+<div style="text-align:center;width:100px;margin: auto;"><img id="d4"></img width ="100 px"></div>
+
+
+    <script>
+          function abc(ev){
+            document.getElementById("d4").src= ev.target.src
+        }
+    </script>
+     </body>
+</html>

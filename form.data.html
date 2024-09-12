@@ -1,0 +1,120 @@
+<html>
+    <head></head>
+    <body>
+        
+        <form  name = "userform"onsubmit="event.preventDefault()">
+
+            <label for="first name"></label>
+            <input type="text" id="fn"><br>
+
+            <label for="last name"></label><br>
+            <input type="text" id="ln"><br>
+
+            <label for="DOB"></label><br>
+            <input type="date" id="dob"><br>
+            
+            <input type="radio" name="gender" value="male" >:male
+            <input type="radio" name="gender" value="female">:female
+            <input type="radio" name="gender" value="others">:others
+            <br>
+            <input type = "checkbox" name = "course" value = "javascript">:Javascript
+            <input type = "checkbox" name = "course" value = "python">:Python
+            <input type = "checkbox" name = "course" value = "react">:React
+            <input type = "checkbox" name = "course" value = "Angular">:Angular
+            <br>
+            <select name="country">
+                <option selected disabled>Please Select Country</option>
+            <option value="India">India</option>
+            <option value = "pakistan">Pakistan</option>
+        </select>
+            <button onclick="print()">print</button>
+        </form>
+        <table border = "1" >
+            <thead>
+                <tr>
+                    <td>firstname</td>
+                    <td>lastname</td>
+                    <td>DOB</td>
+                    <td>Gender</td>
+                    <td>Course</td>
+                    <td>Country</td>
+                </tr>
+            </thead>
+            <tbody id = "d1">
+
+            </tbody>
+        </table>
+
+            <script>
+                var p=[]
+                var fn=document.getElementById("fn")
+                var ln=document.getElementById("ln")
+                var dob=document.getElementById("dob")
+                
+                 function print()
+                 {
+                    
+                    var person={
+                        firstname:"",
+                        lastname:"",
+                        DOB:"",
+                        gen :"",
+                        corse : [],
+                        countries:"",
+                        
+                    }
+                     person.firstname=fn.value
+                     person.lastname=ln.value
+                     person.DOB=dob.value
+                     person.gen = userform.gender.value 
+                     person.countries = userform.country.value 
+                     userform.course.forEach(function(a){
+                        if(a.checked === true){
+                            person.corse.push(a.value)
+                        }
+                      })
+                    p.push(person)
+                    table(p)
+                    
+                 }
+                 function table(arr){
+                    document.getElementById("d1").innerHTML = ""
+                    arr.forEach(function(a){
+
+                        var ntr = document.createElement("tr")
+                        var ntd = document.createElement("td")
+                        ntd.innerHTML = a.firstname 
+                        ntr.appendChild(ntd) 
+
+                        var ltd = document.createElement("td")
+                        ltd.align = "center"
+                        ltd.innerHTML = a.lastname 
+                        ntr.appendChild(ltd)
+
+                        var dtd = document.createElement("td")
+                        dtd.innerHTML = a.DOB  
+                        ntr.appendChild(dtd)
+
+                        var gtd = document.createElement("td")
+                        gtd.innerHTML = a.gen  
+                        ntr.appendChild(gtd)
+
+                        var ctd = document.createElement("td")
+                        ctd.align = "center" 
+                        ctd.innerHTML = a.corse 
+                        ntr.appendChild(ctd)
+
+                        var htd = document.createElement("td")
+                        htd.align = "center" 
+                        htd.innerHTML = a.countries
+                        ntr.appendChild(htd)
+
+                        document.getElementById("d1").appendChild(ntr)
+
+                    })
+                 }
+                 
+            </script>
+       
+    </body>
+</html>

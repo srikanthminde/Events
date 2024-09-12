@@ -1,0 +1,123 @@
+<html>
+    <head></head>
+    <body>
+        <form name="userform" >
+            <label for="firstname"></label>
+            <input type="text" id="fn"><br>
+
+            <label for="lastname"></label>
+            <input type="text" id="ln"><br>
+
+            <label for="DOB"></label>
+            <input type="date" id="dob"><br>
+            
+
+            <input type="radio" name="gender" value="male" >:male
+            <input type="radio" name="gender" value=" female">:female
+            <input type="radio" name="gender" value=" others">:others<br>
+
+            <input type="checkbox" name="corse" value="python">:Python
+            <input type="checkbox" name="corse" value="java">:Java
+            <input type="checkbox" name="corse" value="react">:react
+            <input type="checkbox" name="corse" value="nodejs">:NODEJS<br>
+            <select name="country">
+                <option selected disabled> Please select country</option>
+                <option value="india">INDIA</option>
+                <option value="pakistan">PAKISTAN</option>
+                <option value="england">ENGLAND</option>
+                
+          
+            </select>
+            <button onclick="print(event)">print</button>
+        </form>
+        <table  border="1">
+            <thead>
+               <tr>
+                <td>firstname</td>
+                <td>lastname</td>
+                <td align="center">DOB</td>
+                <td>gender</td>
+                <td align="center">corse</td>
+                <TD align="center">COUNTRY</TD>
+               </tr>
+            </thead>
+            <tbody id = "d1">
+
+            </tbody>
+        </table>
+        <script>
+           
+            var p=[]
+                var fn=document.getElementById("fn")
+                var ln=document.getElementById("ln")
+                var dob=document.getElementById("dob")
+                           
+           function print(ev){
+            ev.preventDefault();
+            var person={
+                firstname:"",
+                lastname:"",
+                DOB:"",
+                gender:"",
+                course:[],
+                counrties:""
+                
+            }
+           
+            person.firstname=fn.value
+            person.lastname=ln.value
+            person.DOB=dob.value
+            person.gender=userform.gender.value
+            person.counrties=userform.country.value
+
+            userform.corse.forEach(function(a){
+                if(a.checked ===true){
+                    person.course.push(a.value)
+                }
+            })
+            p.push(person)
+            table(p)
+            
+            }
+            console.log(p)
+            function table(arr){
+                document.getElementById("d1").innerHTML=""
+                arr.forEach(function(a){
+                    
+                    
+                var ntr=document.createElement("tr")
+                var ntd=document.createElement("td")
+                ntd.innerHTML=a.firstname       
+                ntr.appendChild(ntd)   
+
+                var ltd= document.createElement("td")
+                ltd.innerHTML=a.lastname
+                ntr.appendChild(ltd)
+
+                var dtd=document.createElement("td")
+                dtd.innerHTML=a.DOB
+                ntr.appendChild(dtd)
+
+                var gtd=document.createElement("td")
+                gtd.innerHTML=a.gender
+                ntr.appendChild(gtd)
+
+                var ctd=document.createElement("td")
+                ctd.innerHTML=a.course
+                ntr.appendChild(ctd)
+
+                var contr=document.createElement("td")
+                contr.innerHTML=a.counrties
+                ntr.appendChild(contr)
+                     
+                document.getElementById("d1").appendChild(ntr)
+
+                })
+             }
+           
+
+        </script>
+
+    </body>
+</html>
+

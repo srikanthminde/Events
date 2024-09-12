@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <input type="radio" name="gender" value="male">:male
+        <input type="radio" name="gender" value="female">:female
+        <input type="radio" name="gender" value="others">:others
+        <input type="radio" name="gender" value="type">:type
+        
+        <button onclick="gen(event)"> show gender </button>
+        <h1 id="gen"></h1>
+        <script>
+            var x=""
+                function gen(ev){
+                var z=document.getElementsByName("gender")
+                z.forEach(function(xx){
+                if(xx.checked===true){
+                console.log(xx.value)
+                document.getElementById("gen").innerHTML=xx.value
+                }
+               })
+               
+
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<html>
+    <head></head>
+    <body>
+        <form  name = "dataform" onsubmit = "abcd(event)">
+        <input  type = "text" name = "firstname">
+        <br>
+        <input  type = "text" name = "lastname">
+        <br>
+        <input type = "radio" name = "gender" value = "male" >:Male
+        <input type = "radio" name = "gender" value = "female" >:Female
+        <input type = "radio" name = "gender" value = "others" >:Others
+        <br>
+        <input id = "d4" type = "date" name = "dob" >
+        <br>
+        <input type="checkbox" name ="check" value ="javascript">:javascript
+        <input type="checkbox" name ="check" value ="reactjs">:reactjs 
+        <input type="checkbox" name ="check" value ="angular">:angular
+        <br>
+        <select name = "course">
+            <option value="India"> India</option>
+            <option></option>
+        </select>
+        <button type = "submit" onclick = "abcd(event)">submit</button>
+        </form>
+        <table border ="1">
+            <thead>
+                <tr>
+                    <th>fullname</th>
+                    <th>lastname</th>
+                    <th>gender</th>
+                    <th>dob</th>
+                    <th>check</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="d1">
+
+            </tbody>
+        </table>
+        <script>
+           
+           var p = []
+        //    var x =""
+        //    function abc(e){
+        //       x = e.target.value
+        //    }
+        var dataform = document.dataform
+           function abcd(ev){
+            ev.preventDefault();
+              var ob1 = {
+                firstname : "",
+                lastname : "",
+                gender   : "",
+                dob     :"",
+                check    :[],
+              }
+             ob1.firstname = dataform.firstname.value
+             ob1.lastname = dataform.lastname.value
+             ob1.gender   = dataform.gender.value
+             ob1.dob = dataform.dob.value
+            // ob1.check = userform.check 
+             dataform.check.forEach(function(b){
+                if (b.checked===true){
+                    ob1.check.push(b.value)
+                }
+             })
+
+             p.push(ob1)
+             console.log(p)
+             table(p)
+           //  dataform.reset();
+            }
+
+              
+           function table (arr){
+            document.getElementById("d1").innerHTML=""
+           arr.forEach(function(a){
+            
+                var ntr = document.createElement("tr")
+                var ntd = document.createElement("td")
+                ntd.innerHTML = a.firstname
+                ntr.appendChild(ntd)
+                var ltd = document.createElement("td")
+                ltd.innerHTML = a.lastname
+                ntr.appendChild(ltd)
+                var gtd = document.createElement("td")
+                gtd.innerHTML = a.gender
+                ntr.appendChild(gtd)
+                var dtd = document.createElement("td")
+                dtd.innerHTML = a.dob
+                ntr.appendChild(dtd)
+                var ctd = document.createElement("td")
+                ctd.innerHTML = a.check 
+                ntr.appendChild(ctd)
+              document.getElementById("d1").appendChild(ntr)
+              
+           })
+        }
+        
+                
+           
+        </script>
+    </body>
+</html>

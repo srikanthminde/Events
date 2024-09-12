@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick = "abc(event)">Start</button>
+        <button>Reset</button>
+        <h1 id="d1"></h1>
+        <script>
+          
+          function abc(ev){
+            setInterval(function(){
+                if(ev.target.innerHTML=="Start"){
+             var a = new Date(2008,0,1,0);
+                
+               var b = a.getMinutes();
+               var c = a.getSeconds();
+               var d = a.getMilliseconds()
+               var e = b+":"+c+":"+d 
+               document.getElementById("d1").innerHTML = e 
+              }
+               
+            
+        },1000)
+          
+          }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <style>
+            #d2{
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <button style="color: chocolate;" id="d1" onclick="abc(event)">Taggle</button>
+        <div id="d2"></div>
+            <script>    
+                    var ar=["false","true"]
+                    var  i=0
+                    function abc(ev){
+                    document.getElementById("d2").innerHTML=ar[i]
+                     i++
+                    if(i==ar.length){
+                    i=0
+                    
+                    
+                }
+            }
+        </script>
+
+    </body>
+</html>

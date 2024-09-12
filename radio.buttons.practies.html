@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            border: 2px solid #333; /* Changed from dotted to solid */
+            width: 450px;
+            height: 500px;
+            background-color: rgb(198, 181, 181);
+            margin-top: 20px;
+            display: block;
+            border-radius: 10px;
+        }
+        .radio-group {
+            display: flex; /* Align items horizontally */
+            justify-content: center; /* Center align horizontally */
+            margin-bottom: 20px;
+        }
+        .radio-group label {
+            display: flex; /* Use flex for better alignment */
+            align-items: center; /* Center align items vertically */
+            font-size: 18px;
+            color: #333;
+            margin: 0 10px; /* Space out the labels */
+            cursor: pointer;
+        }
+        .radio-group input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            appearance: none;
+            border: 2px solid #007bff;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+            margin-right: 8px; /* Space between radio and label text */
+        }
+        .radio-group input[type="radio"]:checked {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .radio-group input[type="radio"]:checked::before {
+            content: '';
+            display: block;
+            position: relative;
+            left: 4px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        .radio-group input[type="radio"]:hover {
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="jerry" onchange="getGen(event)"> Jerry</label>
+            <label><input type="radio" name="gender" value="tom" onchange="getGen(event)"> Tom</label>
+            <label><input type="radio" name="gender" value="shinshan" onchange="getGen(event)"> Shinchan</label>
+        </div>
+        <img src="" alt="" id="gender">
+    </div>
+    <script>
+        var img1 = "https://purepng.com/public/uploads/large/purepng.com-jerry-tom-and-jerrytom-and-jerrytomjerryanimated-seriesin-1940characters-1701528659592kaxzs.png";
+        var img2 = "https://i.pinimg.com/originals/76/cc/ff/76ccff3ed21f4e4b2cc4f6e4d47e4a6d.png";
+        var img3 = "https://img00.deviantart.net/bc0b/i/2015/225/5/e/shin_chan_vectorial_by_markef-d95i293.png";
+
+        function getGen(ev) {
+            var imgElement = document.getElementById("gender");
+            
+            switch (ev.target.value) {
+                case "jerry":
+                    imgElement.src = img1;
+                    break;
+                case "tom":
+                    imgElement.src = img2;
+                    break;
+                case "shinshan":
+                    imgElement.src = img3;
+                    break;
+                case "pikachu":
+                    imgElement.src = img4;
+                    break;
+                default:
+                    imgElement.src = "";
+            }
+        }
+    </script>
+</body>
+</html>

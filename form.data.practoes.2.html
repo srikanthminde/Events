@@ -1,0 +1,79 @@
+<html>
+    <head></head>
+    <body> <form>
+        <label for="firstname"></label>
+        <input type="text" id="fn"><br>
+        <label for="lastname"></label>
+        <input type="text" id="ln"><br>
+        <label for="dob"></label>
+        <input type="date" id="dob"><br>
+
+        <input type="radio" name="gender" value="male" onchange="abc(event)">:male
+        <input type="radio" name="gender" value="female" onchange="abc(event)">:female
+        <input type="radio" name="gender" value="others" onchange="abc(event)">:others<br>
+
+        <input type="checkbox"name="corse" value="javascript" onclick=abc(event)>:Javascript
+        <input type="checkbox"name="corse" value="python" onclick="abc(event)">:Python
+        <input type="checkbox"name="corse" value="react" onclick="abc(event)">React
+        <input type="checkbox"name="corse" value="angulare" onclick="abc(event)">:Angulare
+        <input type="checkbox"name="corse" value="java" onclick="abc(event)">Java
+       <button onclick="print(event)">print</button>
+
+    </form>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>firstname</td>
+                <td>lastname</td>
+                <td>DOB</td>
+                <td>corse</td>
+
+            </tr>
+        </thead>
+    </table>
+    <script>
+        var p=[]
+       
+        function print()
+        {
+            var person={
+                firstname:"",
+                lastname:"",
+                DOB:"",
+                corse:""
+                
+            }
+        }
+          
+
+    function table(arr){
+        arr.forEach(function(a){
+            var ntr=document.createElement("tr")
+            var ntd=document.createElement("td")
+            ntd.innerHTML=a.firstname
+            ntr.appindchild(ntd)
+
+            var ntr=document.createElement("tr")
+            var ltd=document.createElement("ltd")
+            ltd.innerHTML=a.lastname
+            ntr.appindchild(ltd)
+
+            var ntr=document.createElement("tr")
+            var dtd=document.createElement("td")
+            dtd.innerHTML=a.DOB
+            ntr.appindchild(dtd)
+
+            var ntr=document.createElement("tr")
+            var ctd=document.createElement("td")
+            ctd.innerHTML=a.corse
+            ntr.appendChild(ctd)
+
+            console.log(person)
+
+        })
+    }
+
+        
+    </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                display: inline-block;
+            }
+         </style>
+    </head>
+   
+    <br>
+    <body>
+        <div id="d1"></div>
+        <input id="d2" type="text">
+        <button onclick="abc(ev)"></button>
+        <div id="d4"></div>
+        <i i></i>
+       
+       <script>
+        
+        function abc (ev){
+            var img=document.createElement("img")
+            img.src=document.getElementById("d2").value
+            document.getElementById("d4").innerHTML(img)
+            document.target.innerHTML.appendChild("d4")
+        } 
+       </script>
+    </body>
+</html>
+

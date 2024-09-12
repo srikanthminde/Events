@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                border: solid 2px;
+                width: 300px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div onclick="abc(event)" id="d1"></div>
+<script>
+    i=0
+    document.getElementById("d1").style.backgroundColor=ar[0]
+    function abc(ev){
+        var ar=["green","blue","green","red","black","pink","orange"]
+        document.getElementById("d1").style.backgroundColor=ar[i]
+        i++
+        if(i==ar.length){
+            i=0
+        }
+    }
+
+    
+</script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head></head>
+    <body>
+       
+        <input type="checkbox" name="eloctronic" value="ac" onchange="foo(event)">:ac
+        <input type="checkbox" name="eloctronic" value="fan" onchange="foo(event)">fan
+        <input type="checkbox" name="eloctronic" value="cooler" onchange="foo(event)">cooler
+        <input type="checkbox" name="eloctronic" value="laptop" onchange="foo(event)">laptop      
+        <input type="checkbox" name="eloctronic" value="phone" onchange="foo(event)">phone
+        <input type="checkbox" name="eloctronic" value="heters" onchange="foo(event)">heters
+        <input type="checkbox" name="eloctronic" value="projectors" onchange="foo(event)">projectors
+
+        <ul id="d1"></ul>
+        
+        <script>
+            var dom=[]
+        
+            function foo(ev){
+              
+                if(ev.target.checked==true){
+                    dom.push(ev.target.value)
+                }
+                else{
+                    dom=dom.filter(function(a){
+                        if(a===ev.target.value){
+                            return false
+                        }
+                        else{
+                            return true
+                        }
+                        
+                    
+                    })
+                    
+                }
+               ul() 
+                
+            }
+            
+            function ul(){
+               document.getElementById("d1").innerHTML=""
+                dom.forEach(function(b){
+                   var nli= document.createElement("li")
+                    nli.innerHTML=b
+                    document.getElementById("d1").appendChild(nli)
+                })
+            }
+         
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            img{
+                border: solid 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="d1" onclick="abc(event)">Preview Image</button>
+        <button id="d4" onclick="xyz(event)">Next Image</button>
+        <img id="d3"></img>
+        <div id="d2"></div>
+        <div></div>
+        <script>
+           
+            var ar=["https://tse3.mm.bing.net/th?id=OIP.Qg30f_L8A9KC2VLt7uyAqAHaE8&pid=Api&P=0&h=180"
+                ,"https://tse1.mm.bing.net/th?id=OIP.SQQFm-oK6Lu_eMaiGGRI1AAAAA&pid=Api&P=0&h=180"
+                ,"https://tse1.mm.bing.net/th?id=OIP.WohpJwA7rxTWgRFfHra7SAHaE5&pid=Api&P=0&h=180"
+                ,",https://tse2.mm.bing.net/th?id=OIP.4bm_Kt0qEaw_fAms5rwo8wHaE8&pid=Api&P=0&h=180"
+                ,"https://tse2.mm.bing.net/th?id=OIP._FJFJqCgfY1GSl100ui2SQAAAA&pid=Api&P=0&h=180"
+                ,"https://tse3.mm.bing.net/th?id=OIP.iBvR7avPLAtj8pnU537ARQHaE8&pid=Api&P=0&h=180"
+            ]  
+            i=1
+            document.getElementById("d1").src.ar[i]
+            function abc(ev){
+                ev.target.innerHTML.document.getElementById("d1")
+                document.getElementById("d3").src.ar[i]
+            }
+            document.getElementById("d4").src.ar[i]
+            function xyz(ev){
+                ev.target.innerHTML.document.getElementById("d4")
+                document.getElementById("d3").src.ar[i]
+                i++
+                if(i==ar.length)  {
+                    i=0
+              }
+            }
+           
+        </script>
+    </body>
+</html>

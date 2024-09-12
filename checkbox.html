@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+           
+        </style>
+    </head> 
+    <body>
+        <input type="checkbox" onchange="showtech(event)" name="techonologies" value="javascript">:JavaScript
+        <input type="checkbox" onchange="showtech(event)" name="techonologies" value="Angulare">:Angulare
+        <input type="checkbox" onchange="showtech(event)" name="techonologies" value="react">:REact
+        <input type="checkbox" onchange="showtech(event)" name="techonologies" value="python">:Python
+        <input type="checkbox" onchange="showtech(event)" name="techonologies" value="express js">:Express Js
+        <input type="checkbox" onchange="showtech(event)" name="techonologies" value="java">:Java
+        <br>
+        <ul id="d1"></ul>
+        <script>
+            var techs=[]
+            function showtech(ev){
+                if(ev.target.checked===true)
+                {
+                    techs.push(ev.target.value)
+                }
+               else{
+                techs=techs.filter(function(st){
+                    if(st===ev.target.value){
+                        return false
+                    }
+                    else{
+                        return true
+                    }
+                })
+                }
+                genui()
+             }
+             function genui(){
+                document.getElementById("d1").innerHTML=""
+                techs.forEach(function(te){
+                var nli=document.createElement("li")
+                nli.innerHTML=te 
+                document.getElementById("d1").appendChild(nli)       
+          })
+     }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+    <head></head>
+    <body>
+        <input type="checkbox" name="place" value="hyedarabad" onchange="loc (event)">:HYDERABAD
+        <input type="checkbox" name="place" value="siddipet"   onchange="loc (event)">:SIDDIPET
+        <input type="checkbox" name="place" value="karimnagar" onchange="loc (event)">:KARIMNAGARE
+        <input type="checkbox" name="place" value="warangal"   onchange="loc (event)">:WARANGAL
+        <input type="checkbox" name="place" value="janagam"    onchange="loc (event)">:JANAGAM
+        <input type="checkbox" name="place" value="adilabad"   onchange="loc (event)">:ADILABAD
+        <br>
+        <ul id="d1"></ul>
+    <script>
+        var area=[]
+       
+        function loc(ev){
+            if(ev.target.checked ==true){
+                area.push(ev.target.value)
+                
+            }
+            else{
+                 area = area.filter(function(a){
+                    if(a==ev.target.value){
+                        return false
+                    }
+                    else{
+                        return true 
+                    }
+                })
+                
+            }
+               
+             ul()
+                  }
+                  function ul(){
+                    document.getElementById("d1").innerHTML=""
+                    area.forEach(function(a){
+                    var nli = document.createElement("li")
+                      nli.innerHTML = a 
+                     document.getElementById("d1").appendChild(nli)
+                  
+                   })
+                }
+        
+    </script>
+
+    </body>
+</html>

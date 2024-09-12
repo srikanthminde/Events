@@ -1,0 +1,138 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Cards</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #c7e5f1;
+            border: 2px solid #040404;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(15, 14, 14, 0.932);
+            margin-bottom: 20px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center the items */
+        }
+        label {
+            color: #555;
+            display: block;
+            margin-bottom: 5px;
+            width: 100%; /* Full width for labels */
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #060606;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #f96aeb;
+            color: rgb(77, 71, 71);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin-top: 10px; /* Space above the button */
+        }
+        button:hover {
+            background-color: #e07b00;
+        }
+        #addcon {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .contact-card {
+            background-color: #a6a99f64;
+            color: #333;
+            border: 1px solid #070707;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(230, 222, 222, 0.1);
+            padding: 15px;
+            margin: 10px;
+            width: 180px;
+            text-align: center;
+        }
+        .contact-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+        .contact-card p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+        <h1>Add Contact Cards</h1>
+        <form id="d1">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="number">Number:</label>
+            <input type="text" id="number" name="number" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="imageURL">Enter Image URL:</label>
+            <input type="text" id="imageURL" name="imageURL" required>
+            <button type="submit">Add Contact</button>
+        </form>
+        <div id="addcon"></div>
+    <script>
+        var a = document.getElementById("d1");
+        a.addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var number = document.getElementById("number").value;
+            var email = document.getElementById("email").value;
+            var imageURL = document.getElementById("imageURL").value; 
+
+            var contactcard = document.createElement("div");
+            contactcard.className = 'contact-card';
+            
+            var im = document.createElement("img");
+            im.src = imageURL;
+            contactcard.appendChild(im);
+            
+            var ne = document.createElement("p");
+            ne.innerHTML = "<strong>Name:</strong> " + name;
+            contactcard.appendChild(ne);
+            
+            var nume = document.createElement("p");
+            nume.innerHTML = "<strong>Number:</strong> " + number;
+            contactcard.appendChild(nume);
+            
+            var eme = document.createElement("p");
+            eme.innerHTML = "<strong>Email:</strong> " + email;
+            contactcard.appendChild(eme);
+
+            document.getElementById("addcon").appendChild(contactcard);
+            document.getElementById("d1").reset();
+        });
+    </script>
+</body>
+</html>
+    

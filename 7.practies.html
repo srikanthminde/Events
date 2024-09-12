@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                border: solid 2px;
+                width: 250px;
+                height: 250px;
+            }
+        </style>
+    </head>
+    <body>
+            <h1 id="d1"></h1>
+            <button id="d2" onclick="abc(event)">True/False</button>
+            <script>
+            document.getElementById("d1").innerHTML="Iam nothing"
+            var ar=["true","false"]
+            var i=0
+            function abc(ev){
+            document.getElementById("d1").innerHTML=ar[i]
+            i++
+
+                if(i==ar.length){
+                    i=0
+                }
+               
+               
+            }
+        </script>
+    </body>
+</html>

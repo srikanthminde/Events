@@ -1,0 +1,48 @@
+
+<html>
+<head>
+    <style>
+        #d5 {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Center vertically */
+        }
+        img {
+            width: 300px;
+            border: solid 2px;
+            margin-bottom: 20px; /* Adds some space between the image and the output */
+        }
+        #d2 {
+            text-align: center; /* Center the text inside the output div */
+        }
+    </style>
+</head>
+<body>
+    <div id="d5">
+        <img id="d1" onclick="abc(event)">
+        <div id="d2"></div>
+    </div>
+    
+    <script>
+        var ar = [
+            "https://wallup.net/wp-content/uploads/2014/10/14/funny/Funny_Minion_Cartoon.jpg",
+            "http://wallpapercave.com/wp/nvSzsVZ.jpg",
+            "http://clipart-library.com/images/LTd5BAXpc.jpg"
+        ];
+
+        document.getElementById("d1").src = ar[0];
+        var i = 1;
+
+        function abc(ev) {
+            document.getElementById("d1").src = ar[i];
+            i++;
+            if (i == ar.length) {
+                i = 0;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+     <style>
+
+     </style>
+    </head>
+    <body>
+
+        <button onclick="abc(event)">white</button>
+ 
+        <script>
+           
+           ev.target.innerHTML="white"
+          ev.target.style.backgroundColor = "white"
+
+         function abc (ev){
+          
+          if(ev.target.innerHTML=="white"){
+            ev.target.innerHTML="green"
+             ev.target.style.backgroundColor="green"
+
+
+          }
+          else{
+             ev.target.innerHTML="white"
+             ev.target.style.backgroundColor="white"
+            
+ 
+ 
+          }
+ 
+         }
+        </script>
+    </body>
+</html>

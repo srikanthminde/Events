@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <style>
+             #d1{
+                width: 200px;
+                height: 250px;
+                border: 2px solid;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div id="d1"></div>
+        <br>
+        <button onclick="abc(event)">RED</button>
+        <button onclick="abc(event)">GREEN</button>
+        <button  onclick="abc(event)">BLUE</button>
+        <button  onclick="abc(event)">RESET</button>
+
+        <script>
+           var x= ev.target.innerHTML
+            function abc(ev){
+                if(x!=="RESET"){
+                document.getElementById("d1").style.backgroundColor=x
+                }
+                else{
+                    document.getElementById("d1").style.backgroundColor=""
+                }
+            } -->
+
+            <div id="d1"></div>
+            <br>
+            <button onclick="abc(event)">red</button>
+            <button onclick="abc(event)">green</button>
+            <button onclick="abc(event)">blue</button>
+            <button id ="d2" onclick="abc(event)">reset</button>
+            
+
+
+          <script>
+           // var y = document.getElementById("d2").innerHTML
+            
+            function abc(ev){
+                var x = ev.target.innerHTML
+              if( x!= "reset"){
+                var x =ev.target.innerHTML 
+              document.getElementById("d1").style.backgroundColor=x
+               
+              }
+              else{
+               document.getElementById("d1").style.backgroundColor =""
+              }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </script>
+       
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+    <body>
+        <input type="checkbox" name="biryani" value="chicken" onchange="foo(event)">:chicken
+        <input type="checkbox" name="biryani" value="mutton" onchange="foo(event)">:mutton
+        <input type="checkbox" name="biryani" value="panipuri" onchange="foo(event)">:panipuri
+        <ul id="d1"></ul>
+        <script>
+            var zin=[]
+           function foo(ev){
+            if(ev.target.checked==true){
+                zin.push(ev.target.value)
+            }
+            else{
+                zin=zin.filter(function(a){
+                    if(a==ev.target.value){
+                        return false
+                    }
+                    else{
+                        return true
+                    }
+                })
+            }
+            ul()
+           }
+            
+          function ul(){
+            document.getElementById("d1").innerHTML=""
+            zin.forEach(function(a){
+                var nli=document.createElement("li")
+                nli.innerHTML=a
+                document.getElementById("d1").appendChild(nli)
+            })
+          }
+        </script>
+
+    </body>
+</html>

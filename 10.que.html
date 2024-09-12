@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                border: solid 1px;
+                height: 100px;
+                width: 100px;
+                
+            }
+        </style>
+    </head>
+    <body>
+                <div id="d1"></div>
+                
+            
+                <button id="d2" onclick="abc(event)">Taggle</button>
+                <script>
+                document.getElementById("d1").style.backgroundColor="white"
+                function abc(ev){
+                if(document.getElementById("d1").style.backgroundColor=="white"){
+                
+                 document.getElementById("d1").style.backgroundColor="yellow"
+               
+
+                }
+               else{
+                   document.getElementById("d1").style.backgroundColor="white"
+               }
+            }
+        </script>
+
+    </body>
+</html>

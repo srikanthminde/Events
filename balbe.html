@@ -1,0 +1,40 @@
+<html>
+    <head> 
+        <style>
+            #d1{
+                border: solid 2px;
+                height: 290px;
+                width: 270px;
+                align-content: center;
+            }
+            #img{
+                width: 100px;
+                height: 100px;
+                align-content: center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+       
+        <img id="d1"></img>
+        <button id="d2" onclick="abc(event)"></button>
+       <script>
+        var ar=["https://jooinn.com/images/bulb-10.jpg",
+        "https://www.freepnglogos.com/uploads/bulb-png/light-bulb-png-clip-art-best-web-clipart-37.png"]
+        i=1
+        var br=["On","Off"]
+       function abc(ev){
+        ev.target.innerHTML=br[i]
+        document.getElementById("d1").src=ar[i] 
+            i--
+            if(i<0){
+                i=1
+            }
+        }
+       
+       
+       </script>
+    </body>
+</html>

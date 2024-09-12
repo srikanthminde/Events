@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        <input type="radio" name="subject" value="telugu" onchange="sub(event)">:telugu
+        <input type="radio" name="subject" value="hindi" onchange="sub(event)">:hindi 
+        <input type="radio" name="subject" value="english": onchange="sub(event)">english
+        <input type="radio" name="subject" value="chemistry" onchange="sub(event)">:chemistry
+        <h1 id="d1"></h1>
+        <script>
+            
+            var x=""
+            function sub(ev){
+                document.getElementById("d1").innerHTML=ev.target.value
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onclick Buttons with Colors Example</title>
+<style>
+  /* Define styles for the button */
+  .color-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+  }
+
+  /* Define different classes for different button colors */
+  .red { background-color: #FF5733; color: white; }
+  .blue { background-color: #33B5E5; color: white; }
+  .green { background-color: #77DD6B; color: white; }
+</style>
+</head>
+<body>
+
+<button class="color-button red" onclick="changeColor(this)">Red</button>
+<button class="color-button blue" onclick="changeColor(this)">Blue</button>
+<button class="color-button green" onclick="changeColor(this)">Green</button>
+
+<script>
+// JavaScript function to change button color onclick
+function changeColor(button) {
+  // Toggle classes to change colors
+  if (button.classList.contains('red')) {
+    button.classList.remove('red');
+    button.classList.add('blue');
+  } else if (button.classList.contains('blue')) {
+    button.classList.remove('blue');
+    button.classList.add('green');
+  } else if (button.classList.contains('green')) {
+    button.classList.remove('green');
+    button.classList.add('red');
+  }
+}
+</script>
+
+</body>
+</html>
+</html>

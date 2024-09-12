@@ -1,0 +1,25 @@
+<html>
+    <head>
+    </head>
+    <body>
+<div id="d1">
+
+<input id="d2" type="text">
+<button onclick="abc(event)">Add Students</button>
+<div id="d3">
+    <ul id="d4">
+        
+    </ul>
+</div> 
+
+</div>
+
+        <script>
+            function abc(ev){
+              nli=document.createElement("li")
+              nli.innerHTML=document.getElementById("d2").value
+              document.getElementById("d3").appendChild(nli)
+            }
+        </script>
+    </body>
+</html>

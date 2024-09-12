@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <input type="radio" name="laptop" value="DELL" onchange="dis(event)">:DELL LAPTOP
+        <input type="radio" name="laptop" value="hp" onchange="dis(event)">:HP LAPTOP
+        <input type="radio" name="laptop" value="lenov" onchange="dis(event)">: LENOVO
+        <input type="radio" name="laptop" value="zebronics" onchange="dis(event)">:zebronics
+        <input type="radio" name="laptop" value="mac book pro" onchange="dis(event)">:MAC BOOK PRO 
+        <input type="radio" name="laptop" value="assusi" onchange="dis(event)">:assusi
+        <h2 id="d1"></h2>
+        <script>
+            function dis(ev){
+                document.getElementById("d1").innerHTML=ev.target.value
+            }
+        </script>
+    </body>
+</html>

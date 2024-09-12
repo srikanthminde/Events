@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            #d2{
+                width: 50px;
+                height: 50;
+                font-size:25;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="d2" onclick="abc(event)">On</button>
+        <div id="d1"></div>
+        <script>
+            
+            function abc(ev){
+                // document.getElementById("d1").innerHTML="On"
+                if(ev.target.innerHTML=="Off")
+                ev.target.innerHTML="On"
+                else{
+                    ev.target.innerHTML="Off"
+            }
+            }
+        </script>
+    </body>
+</html>

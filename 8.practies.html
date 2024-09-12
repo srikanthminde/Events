@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            #h5{
+               display: inline-block; 
+            }
+        </style>
+    </head>
+    <body>
+<!--         
+        <h1 id="d3"></h1> -->
+        <button  onclick="abc(event)"> Like</button> <br>
+        <button onclick="xyz(event)"> Dislilke</button>
+        <h5 id="d1"></h5>
+        <h5 id="d2"></h5>
+        <script>
+            
+            var c=0
+            function abc(ev){
+                 c++
+
+                document.getElementById("d1").innerHTML=c
+
+            }
+            var c1=0
+            function xyz(ev){
+                
+                document.getElementById("d2").innerHTML=c1
+               c1++
+                
+            }
+        </script>
+</html>

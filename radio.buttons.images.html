@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            border: 2px solid #ddd;
+            width: 450px;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            display: block;
+        }
+        .radio-group {
+            margin-bottom: 20px;
+        }
+        input[type="radio"] {
+            display: none; /* Hide default radio buttons */
+        }
+        label {
+            display: inline-flex;
+            align-items: center;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #333;
+        }
+        label span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #007bff;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        input[type="radio"]:checked + span {
+            background-color: #007bff;
+        }
+        input[type="radio"]:checked + span::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fff;
+            position: relative;
+            top: 4px;
+            left: 4px;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="gender" value="male" onchange="getGen(event)">
+                <span></span> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female" onchange="getGen(event)">
+                <span></span> Female
+            </label>
+            <label>
+                <input type="radio" name="gender" value="others" onchange="getGen(event)">
+                <span></span> Others
+            </label>
+        </div>
+        <h1 id="d1"></h1>
+        <img src="" alt="" id="gender">
+    </div>
+    <script>
+        var imgURL1 = "https://i.pinimg.com/originals/30/57/b9/3057b93a8c8b26f0dacfafa3759b1981.jpg";
+        var imgURL2 = "https://1.bp.blogspot.com/-vdq5T6-jbRg/WuWU8TLvi6I/AAAAAAAAJ2M/pS7iHRuksiISrfIiNlm7ZJwOJCuGR6KxgCLcBGAs/s1600/Rashmika-Mandanna-hd-photos-47.jpg";
+        
+        function getGen(ev) {
+            var imgElement = document.getElementById("gender");
+            var textElement = document.getElementById("d1");
+            
+            if (ev.target.value === "male") {
+                imgElement.src = imgURL1;
+                imgElement.style.display = "block";
+                textElement.innerHTML = "";
+            } else if (ev.target.value === "female") {
+                imgElement.src = imgURL2;
+                imgElement.style.display = "block";
+                textElement.innerHTML = "";
+            } else if (ev.target.value === "others") {
+                imgElement.src = "";
+                imgElement.style.display = "none";
+                textElement.innerHTML = "Others";
+            }
+        }
+    </script>
+</body>
+</html>

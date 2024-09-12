@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+
+<button onclick="abc(event)"> cliked 0 times</button>
+<!-- <button onclick="abc(event)"> cliked 0 times</button>
+<button onclick="abc(event)"> cliked 0 times</button>
+<button onclick="abc(event)"> cliked 0 times</button> -->
+
+<script>
+    var c=0;
+    function abc(e){
+        c++;
+        e.target.innerHTML=("cliked"+c+"times")
+    }
+
+</script>
+    </body>
+</html>

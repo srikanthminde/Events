@@ -1,0 +1,81 @@
+
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align the items */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            outline: none; /* Remove default outline */
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:active {
+            background-color: #004494;
+            transform: scale(0.98);
+        }
+        img {
+            border: solid 2px #ddd;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease;
+            display: block;
+            margin-bottom: 20px; /* Space between image and buttons */
+        }
+        img:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="" alt="" id="d1">
+        <div class="button-container">
+            <button onclick="abc()">CAT</button>
+            <button onclick="xyz()"> PIKACHU</button>
+            <button onclick="pqr()">PEACE</button>
+        </div>
+    </div>
+    <script>
+        var imgURL = "https://static.vecteezy.com/system/resources/previews/023/369/092/non_2x/cat-cartoon-character-clipart-ai-generated-free-png.png";
+        function abc() {
+            document.getElementById("d1").src = imgURL;
+        }
+        var img2 = "https://www.gratistodo.com/wp-content/uploads/2016/11/Pikachu-9.png";
+        function xyz() {
+            document.getElementById("d1").src = img2;
+        }
+        var img3 = "https://png.pngtree.com/png-clipart/20190705/original/pngtree-hand-in-peace-sign-png-image_4341534.jpg";
+        function pqr() {
+            document.getElementById("d1").src = img3;
+        }
+    </script>
+</body>
+</html>

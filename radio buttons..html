@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <input type="radio" name="food" value="Chicken biryani" onchange="food1(event)">:chicken
+        <input type="radio" name="food" value="Mutton biryani" onchange="food1(event)">:mutton
+        <input type="radio" name="food" value="Veg biryani" onchange="food1(event)">:veg
+        <input type="radio" name="food" value="Pannir" onchange="food1(event)">:pannir
+        <br>
+        <h1 id="f"></h1>
+        <script>
+            var x=""
+            function food1(ev){
+            
+                    document.getElementById("f").innerHTML=ev.target.value
+                }
+           
+        </script>
+    </body>
+</html>
